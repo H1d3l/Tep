@@ -1,4 +1,5 @@
 <h2>Minhas Tarefas</h2>
+
 <ul class="tarefas">
 <li *ngFor="let tarefa of tarefas" 
     (click)="onSelect(tarefa)"
@@ -7,15 +8,5 @@
   </li>
 </ul>
 
-<div *ngIf="selectedTarefa">
-        <h2>{{selectedTarefa.nome | uppercase}} Details</h2>
-        <div><span>id: </span>{{selectedTarefa.id}}</div>
-        <div>
-          <label>name:
-            <input [(ngModel)]="selectedTarefa.nome" placeholder="name"/>
-          </label>
-        </div>
-
-</div>
-
+<app-tarefa-detail [tarefa] = "selectedTarefa"></app-tarefa-detail>
 
