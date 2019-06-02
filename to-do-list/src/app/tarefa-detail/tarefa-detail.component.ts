@@ -21,12 +21,12 @@ export class TarefaDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.gettarefa ();
+    this.getTarefa ();
   }
   
-  gettarefa(): void {
+  getTarefa(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.tarefaService.gettarefa(id)
+    this.tarefaService.getTarefa(id)
       .subscribe(tarefa => this.tarefa = tarefa);
   }
   goBack(): void {

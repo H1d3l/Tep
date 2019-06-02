@@ -10,6 +10,7 @@ import {TarefaService} from '../tarefa.service';
 export class DashboardComponent implements OnInit {
 
   tarefas : Tarefa[] = []
+
   constructor(private tarefaService : TarefaService) { }
 
   ngOnInit() {
@@ -17,7 +18,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getTarefas() : void{
-    this.tarefaService.gettarefas()
+    this.tarefaService.getTarefas()
     .subscribe(tarefas => this.tarefas  = tarefas.slice(1, 5));
 
   }

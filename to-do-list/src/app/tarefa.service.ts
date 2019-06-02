@@ -11,11 +11,11 @@ export class TarefaService {
 
   constructor(private messageService: MessageService) { }
   
-  gettarefas() : Observable<Tarefa[]> {
+  getTarefas() : Observable<Tarefa[]> {
     this.messageService.add('TarefaService: fetched tarefas');
     return of (ListaTarefas);
   }
-  gettarefa(id: number): Observable<Tarefa> {
+  getTarefa(id: number): Observable<Tarefa> {
     this.messageService.add(`TarefaService: fetched tarefa id=${id}`);
     return of(ListaTarefas.find(tarefa => tarefa.id === id));
   }

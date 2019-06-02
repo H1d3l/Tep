@@ -17,13 +17,13 @@ export class ToDoComponent implements OnInit {
   constructor(private tarefaService : TarefaService) { }
 
   ngOnInit() {
-    this.gettarefas();
+    this.getTarefas();
   }
  
   
   
-  gettarefas() : void {
-    this.tarefaService.gettarefas()
+  getTarefas() : void {
+    this.tarefaService.getTarefas()
     .subscribe(tarefas => this.tarefas = tarefas);
   }
   
