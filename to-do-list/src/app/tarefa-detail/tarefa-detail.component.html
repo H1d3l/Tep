@@ -2,10 +2,13 @@
   
     <h2>{{tarefa.nome | uppercase}} Details</h2>
     <div><span>id: </span>{{tarefa.id}}</div>
+
     <div>
       <label>name:
         <input [(ngModel)]="tarefa.nome" placeholder="name"/>
       </label>
     </div>
+    <button (click)="goBack()">go back</button>
+
 
 </div>

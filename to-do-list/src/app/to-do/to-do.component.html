@@ -1,12 +1,9 @@
 <h2>Minhas Tarefas</h2>
 
 <ul class="tarefas">
-<li *ngFor="let tarefa of tarefas" 
-    (click)="onSelect(tarefa)"
-    [class.selected]="tarefa === selectedTarefa">
-    <span class="badge">{{tarefa.id}}</span> {{tarefa.nome}}
+<li *ngFor="let tarefa of tarefas" >
+    <a routerLink="/detail/{{tarefa.id}}">
+      <span class="badge">{{tarefa.id}}</span> {{tarefa.nome}}
+    </a>
   </li>
 </ul>
-
-<app-tarefa-detail [tarefa] = "selectedTarefa"></app-tarefa-detail>
-

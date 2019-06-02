@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tarefa } from './to-do';
-import {ListaTarefas} from '../mock-tarefas'
+//import {ListaTarefas} from '../mock-tarefas';
+import {TarefaService} from '../tarefa.service'
 
 @Component({
   selector: 'app-to-do',
@@ -9,20 +10,23 @@ import {ListaTarefas} from '../mock-tarefas'
 })
 export class ToDoComponent implements OnInit {
 
-  tarefas = ListaTarefas;
-  selectedTarefa: Tarefa;
+  tarefas : Tarefa[];
 
   
 
-  constructor() { }
+  constructor(private tarefaService : TarefaService) { }
 
   ngOnInit() {
+    this.gettarefas();
   }
-
-  onSelect(tarefa: Tarefa): void {
-    this.selectedTarefa = tarefa;
-    
+ 
+  
+  
+  gettarefas() : void {
+    this.tarefaService.gettarefas()
+    .subscribe(tarefas => this.tarefas = tarefas);
   }
+  
 
 }
 

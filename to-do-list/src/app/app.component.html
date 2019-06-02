@@ -1,10 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
   <h1>
      {{ title }}
   </h1>
+  <nav>
+    <a routerLink="/tarefas">Tarefas</a>
+    <a routerLink="/dashboard">Dashboard</a>
+
+  </nav>
   
 
 <router-outlet></router-outlet>
-<app-to-do></app-to-do>
-<app-tarefa-detail [tarefa] = "selectTarefa"></app-tarefa-detail>
+<app-messages></app-messages>
