@@ -1,5 +1,7 @@
 export class Tarefa{
     id: number;
-    nome:string
+    nome:string;
+    responsavel:string;
+    porcentagem:number;
 
 }

@@ -1,7 +1,12 @@
 <div *ngIf="tarefa">
   
     <h2>{{tarefa.nome | uppercase}} Details</h2>
-    <div><span>id: </span>{{tarefa.id}}</div>
+    <div>
+      <span>id: </span>{{tarefa.id}} <br>
+      <span>Responsavel: </span>{{tarefa.responsavel}} <br>
+      <span>Porcentagem: </span>{{tarefa.porcentagem}} <br>
+    
+    </div>
 
     <div>
       <label>name:
